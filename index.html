@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul class="sidebar">
+            <li onclick="closeSidebar()" ><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li class="aba-botao-side" onclick="openTab('aba1')"><a href="#">Calculadora Diversa</a></li>
+            <li class="aba-botao-side" onclick="openTab('aba2')"><a href="#">Qual a Capital?</a></li>
+            <li class="aba-botao-side" onclick="openTab('aba3')"><a href="#">Calculadora de IMC</a></li>
+            <li class="aba-botao-side" onclick="openTab('aba4')"><a href="#">Área do Quadrado</a></li>
+            <li class="aba-botao-side" onclick="openTab('aba5')"><a href="#">Área do Triângulo</a></li>
+            <li class="aba-botao-side" onclick="openTab('aba6')"><a href="#">E o meu desconto?</a></li>
+            <li class="contato" href="#"><button id="botao-contato-side">Contato</button></li>
+        </ul>
+        <ul>
+            <img class="logo" src="Captura_de_tela_2023-11-28_180734-removebg-preview.png" alt="logo">
+            <li class="aba-botao" onclick="openTab('aba1')"><a href="#">Calculadora Diversa</a></li>
+            <li class="aba-botao" onclick="openTab('aba2')"><a href="#">Qual a Capital?</a></li>
+            <li class="aba-botao" onclick="openTab('aba3')"><a href="#">Calculadora de IMC</a></li>
+            <li class="aba-botao" onclick="openTab('aba4')"><a href="#">Área do Quadrado</a></li>
+            <li class="aba-botao" onclick="openTab('aba5')"><a href="#">Área do Triângulo</a></li>
+            <li class="aba-botao" onclick="openTab('aba6')"><a href="#">E o meu desconto?</a></li>
+            <li class="contato" href="#"><button id="botao-contato">Contato</button></li>
+            <li class="menu-button" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+    </nav>
+    <!-- Conteúdo da "Homepage" -->
+<div class="homepage" id="homepage">
+    <img class="logoHome" src="Captura_de_tela_2023-11-28_180734-removebg-preview.png">
+</div>
+<!-- Conteúdo da "Calculadora Diversa" -->
+<div class="aba-conteudo" id="aba1">
+    <div class="calculadora-diversa">
+      <div class="titulos">
+        <h1>Calculadora diversa</h1>
+      </div>
+      <div class="input-diversa">
+        <label for="numero1">Quanto é: </label>
+        <input id="numero1" type="number" placeholder="Insira">
+        <label for="numero2"> com/por </label>
+        <input id="numero2" type="number" placeholder="Insira">
+      </div>
+      <div class="operacao">
+        <div class="operacao12">
+          <label>
+            <input type="checkbox" id="boxSoma"> Soma
+          </label>
+          <label>
+            <input type="checkbox" id="boxSub"> Subtração
+          </label>
+        </div>
+        <div class="operacao34">
+          <label>
+            <input type="checkbox" id="boxMult"> Multiplicação
+          </label>
+          <label>
+            <input type="checkbox" id="boxDiv"> Divisão
+          </label>
+        </div>
+        <div class="operacao5">
+          <label>
+            <input type="checkbox" id="boxMedia"> Media
+          </label>
+        </div>
+      </div>
+      <button id="botao-div" class="botao-resultado" onclick="calcularDIV()">Ver resultados</button>
+      <div class="resultado" id="resultadoDIV"></div>
+    </div>
+    <script src="aba1.js"></script>
+  </div>
+  <!-- Conteúdo da "Calculadora Diversa" -->
+  <!-- Conteúdo do "Qual a Capital?"" -->
+  <div class="aba-conteudo" id="aba2">
+    <div class="qual-capital">
+      <div class="titulos">
+        <h1>Qual a capital?</h1>
+      </div>
+      <div class="input-capital">
+        <label for="estado">Selecione um Estado</label>
+          <select id="estados">
+            <option value="Selecione">Selecione um Estado</option>
+            <option value=" Acre">Acre (AC)</option>
+            <option value=" Alagoas">Alagoas (AL)</option>
+            <option value="Amapá">Amapá (AP)</option>
+            <option value="Amazonas">Amazonas (AM)</option>
+            <option value="Bahia">Bahia (BA)</option>
+            <option value="Ceará">Ceará (CE)</option>
+            <option value="Distrito Federal">Distrito Federal (DF)</option>
+            <option value="Espírito Santo">Espírito Santo (ES)</option>
+            <option value="Goiás">Goiás (GO)</option>
+            <option value="Maranhão">Maranhão (MA)</option>
+            <option value="Mato Grosso">Mato Grosso (MT)</option>
+            <option value="Mato Grosso do Sul">Mato Grosso do Sul (MS)</option>
+            <option value="Minas Gerais">Minas Gerais (MG)</option>
+            <option value="Pará">Pará (PA)</option>
+            <option value="Paraíba">Paraíba (PB)</option>
+            <option value="Paraná">Paraná (PR)</option>
+            <option value="Pernambuco">Pernambuco (PE)</option>
+            <option value="Piauí">Piauí (PI)</option>
+            <option value="Rio de Janeiro">Rio de Janeiro (RJ)</option>
+            <option value="Rio Grande do Norte">Rio Grande do Norte (RN)</option>
+            <option value="Rio Grande do Sul">Rio Grande do Sul (RS)</option>
+            <option value="Rondônia">Rondônia (RO)</option>
+            <option value="Roraima">Roraima (RR)</option>
+            <option value="Santa Catarina">Santa Catarina (SC)</option>
+            <option value="São Paulo">São Paulo (SP)</option>
+            <option value="Sergipe">Sergipe (SE)</option>
+            <option value="Tocantins">Tocantins (TO)</option>
+          </select>
+        </div>
+        <button id="botao-capital" class="botao-resultado" onclick="mostrarCapital()">A capital é?</button>
+        <div class="resultado" id="resultadoCAP"></div>
+      </div>
+      <script src="aba2.js"></script>
+    </div>
+    <!-- Conteúdo do "Qual a Capital?"" -->
+    <!-- Conteúdo da "Calculadora de IMC" -->
+    <div class="aba-conteudo" id="aba3">
+      <div class="calculadora-imc">
+      <div class="titulos">
+        <h1>Calculadora de IMC</h1>
+      </div>
+      <div class="input-imc">
+        <label for="altura">Altura (cm): </label>
+        <input id="altura" type="number" min="100" max="250" placeholder="Insira sua altura aqui!"><br>
+      </div>
+      <div class="input-imc">  
+        <label for="peso">Peso (kg): </label>
+        <input id="peso" type="number" min="0" max="250" placeholder="Insira seu peso aqui!"><br>
+      </div>
+      <button id="botao-imc" class="botao-resultado" onclick="calcularIMC()">Calcular o IMC</button>
+      <div class="resultado" id="resultadoIMC"></div>
+    </div>
+    <script src="aba3.js"></script>
+    </div>
+  <!-- Conteúdo da "Calculadora de IMC" -->
+  <!-- Conteúdo da Calculadora de Área² -->
+    <div class="aba-conteudo" id="aba4">
+    <div class="area-quadrado">
+      <div class="titulos">
+        <h1>Área do ²</h1>
+      </div>
+      <div class="input-quad">
+        <label for="comprimento">Comprimento (cm): </label>
+        <input id="comprimento" type="number" min="0" placeholder="Insira o comprimento do quadrado ou retângulo!"><br>
+      </div>
+      <div class="input-quad">
+        <label for="largura">Largura (cm): </label>
+        <input id="largura" type="number" min="0" placeholder="Insira a largura do quadrado ou retângulo!"><br>
+      </div>
+      <button id="botao-quad" class="botao-resultado" onclick="calcularArea()">Ver área</button>
+      <div class="resultado" id="resultadoArea"></div>
+    </div>
+    <script src="aba4.js"></script>
+    </div>
+  <!-- Conteúdo da Calculadora Área² -->
+  <!-- Conteúdo da Calculadora Área do Triângulo -->
+    <div class="aba-conteudo" id="aba5">
+    <div class="area-triangulo">
+      <div class="titulos">
+        <h1>Área do Triângulo</h1>
+      </div>
+      <div class="input-tri">
+        <label for="base">Base (cm): </label>
+          <input id="base" type="number" min="0" placeholder="Insira a base aqui!"><br>
+        </div>
+        <div class="input-tri">
+          <label for="largura-tri">Largura (cm): </label>
+          <input id="largura-tri" type="number" min="0" placeholder="Insira a largura aqui!"><br>
+        </div>
+        <button id="botao-tri" class="botao-resultado" onclick="calcularTri()">Ver Área</button>
+        <div class="resultado" id="resultadoTri"></div>
+    </div>
+    <script src="aba5.js"></script>
+    </div>
+  <!-- Conteúdo da Calculadora Área do Triângulo -->
+  <!-- Conteúdo do E o meu desconto? -->
+    <div class="aba-conteudo" id="aba6">
+      <div class="desconto">
+        <div class="titulos">
+          <h1>E o meu desconto?</h1>
+        </div>
+      <div class="input-desconto">
+        <label for="valor">Valor do produto: </label>
+        <input id="valor" type="number" placeholder="Valor do produto!"><br>
+      </div>
+      <div class="input-desconto">
+        <label for="desconto">Desconto (%): </label>
+        <input id="desconto" type="number" min="0" max="100" placeholder="Valor do desconto!"><br>
+      </div>
+      <button id="botao-desconto" class="botao-resultado" onclick="desconto()">De quanto foi o meu desconto?</button>
+      <div class="resultado" id="resultadoDesconto"></div>
+    </div>
+    <script src="aba6.js"></script>
+    </div>
+  <!-- Conteúdo do E o meu desconto? -->
+<!-- Botão home -->
+<div class="botao-homepage">
+    <input type="image" id="homepage" alt="Homepage" src="homepage-button.png" onclick="irParaHomepage()"></input>
+</div>
+  <!-- Footer -->
+<footer>
+    <small id="footer-text">© 2023 Francisco Medeiros Santos Neto.</small>
+</footer>
+</body>
+<script src="index.js"></script>
+</html>

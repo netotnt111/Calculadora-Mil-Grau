@@ -1,0 +1,367 @@
+/* fonte */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+
+/* palheta */
+:root{
+    ---cor-primaria: #2C2B30;
+    ---cor-secundaria: #4F4F51;
+    ---cor-fundo: #D6D6D6;
+    ---cor-botão1: #F58F7C;
+    ---cor-botão2: #F2C4CE;
+}
+
+/* medida de centralização */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* corpo */
+body {
+    font-family: "Montserrat", sans-serif, bold;
+    font-weight: 550;
+    font-size: 16px;
+    min-height: 100vh;
+    background-color: var(---cor-primaria);
+}
+
+/* Logo */
+.logo {
+    margin-right: auto;
+    width: 250px;
+    cursor: pointer;
+}
+
+/* barra de navegação */
+nav {
+    background-color: var(---cor-secundaria);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li {
+    margin: 12px;
+    height: 60px;
+}
+
+nav li a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+    transition: all 0.3s ease 0s;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+}
+nav li a:hover, nav li a:focus {
+    color: #ccc;
+    background-color: #818184;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+/* barra lateral */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 450px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.025);
+    backdrop-filter: blur(10px);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+
+
+/* botão para contato */
+#botao-contato {
+    transform: translate( 0%, 45%);
+    padding: 9px 25px;
+    background-color: rgb(0, 130, 163);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all0.3s ease 0s;
+}
+#botao-contato:hover {
+    background-color: rgba(0, 190, 238, 0.8);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+/* botão do menu */
+.menu-button {
+    display: none;
+}
+
+/* botão para contato side */
+#botao-contato-side {
+    padding: 30px 95px;
+    background-color: rgb(0, 130, 163);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+#botao-contato-side:hover {
+    background-color: rgba(0, 190, 238, 0.8);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+/* imagem no centro da tela inicial */
+.homepage {
+    position: fixed;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+/* Para que nada apareça sem ser chamado */
+.aba-conteudo {
+    display: none;
+}
+
+/* corpo dos conteudos */
+.calculadora-imc,
+.calculadora-diversa,
+.qual-capital,
+.area-quadrado,
+.area-triangulo,
+.desconto {
+    position: fixed;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    background-color: var(---cor-fundo);
+    width: 30%;
+    padding: 20px;
+    border: 5px;
+    border-radius: 20px;
+    box-shadow: 0 0 50px rgb(0 0 0);
+}
+.titulos {
+    text-shadow: rgb(255 255 255 / .3) 1px -1px, rgb(255 255 255 / .3) -1px 1px, rgb(255 255 255 / .3) -1px -1px, rgb(0 0 0 / .3) 1px 1px;
+}
+
+/* titulo das operações */
+h2 {
+    margin: 0 0 20px;
+    color: #333;
+    padding: auto;
+}
+
+/* inputs checkbox */
+input[type="checkbox"] {
+    display: inline-block;
+    margin: 1px;
+}
+
+/* inputs number */
+input[type="number"] {
+    align-items: center;
+    align-content: center;
+    font-size: medium;
+    width: 90%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* organização e disposição das checkbox */
+.operacao12,
+.operacao34,
+.operacao5 {
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.operacao12 input[type="checkbox"],
+.operacao34 input[type="checkbox"],
+.operacao5 input[type="checkbox"] {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+}
+
+/* select */
+select {
+    align-items: center;
+    align-content: center;
+    font-size: medium;
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+/* input */
+.input-diversa, 
+.input-imc,
+.input-capital,
+.input-quad,
+.input-tri,
+.input-desconto {
+    margin: 10px;
+}
+
+/* botao resultado */
+#botao-imc,
+#botao-div,
+#botao-capital,
+#botao-quad,
+#botao-tri,
+#botao-desconto {
+    width: 100%;
+    padding: 10px;
+    background-color: var(---cor-botão1);
+    border: none;
+    border-radius: 10px;
+}
+
+/* animação botao resultado*/
+.botao-resultado {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+  }
+  .botao-resultado:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(---cor-botão2);
+    border-radius: 10px;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+  }
+  .botao-resultado:hover, .botao-resultado:focus, .botao-resultado:active {
+    color: black;
+  }
+  .botao-resultado:hover:before, .botao-resultado:focus:before, .botao-resultado:active:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+
+/* resultado font */
+.resultado {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+
+/* medidas para mobile */
+@media(max-width: 1220px) {
+    .aba-botao {
+        display: none;
+    }
+    .menu-button {
+        display: block;
+    }
+}
+@media(max-width: 550px) {
+    .sidebar {
+        width: 100%;
+    }
+}
+
+/* botão homepage */
+.botao-homepage {
+    position: fixed;
+    bottom: 2.5%;
+    left: 90%; /* Para por do lado direito da tela */
+    transform: translateX(-50%); /* Com a centralização horizontal fica muito mais bonito */
+    z-index: 998; /* Acima de tudo e todos */
+}
+
+/* tamanho do botão homepage*/
+input[type="image"] {
+    width: 60%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* animação do botão homepage */
+.botao-homepage {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+}
+.botao-homepage:hover, .botao-homepage:focus, .botao-homepage:active {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    bottom: 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    height: 30px;
+}
+
+footer-text {
+    position: absolute;
+}
